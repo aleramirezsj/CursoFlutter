@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 
 class MiFloatingActionButton extends StatefulWidget {
+  bool mini=true;
+  IconData icono;
+  Color colorDeFondo;
+
+  MiFloatingActionButton(this.mini,this.icono,this.colorDeFondo);
   @override
-  State<StatefulWidget> createState() => _MiFloatingActionButtonState();
+  State<StatefulWidget> createState() => _MiFloatingActionButtonState(this.mini, this.icono, this.colorDeFondo);
 }
 
 class _MiFloatingActionButtonState extends State<MiFloatingActionButton> {
+  bool mini=true;
+  IconData icono;
+  Color colorDeFondo;
+
+  _MiFloatingActionButtonState(this.mini,this.icono, this.colorDeFondo);
+
   void fabPresionado() {
     Scaffold.of(context).showSnackBar(SnackBar(
       content: Text("Agregado a favoritos"),
@@ -15,11 +26,11 @@ class _MiFloatingActionButtonState extends State<MiFloatingActionButton> {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      backgroundColor: Color(0xFF000000),
-      mini: true,
+      backgroundColor: this.colorDeFondo,
+      mini: this.mini ,
       tooltip: "Favorito",
       onPressed: fabPresionado,
-      child: new Icon(Icons.favorite_border),
+      child: new Icon(this.icono),
     );
   }
 }

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'app_button/mi_floating_action_button.dart';
 
-class TarjetaImagen extends StatelessWidget {
+class TarjetaImagenRetoFinal extends StatelessWidget {
   String pathImage = "assets/images/beach.jpeg";
 
-  TarjetaImagen(this.pathImage);
+  TarjetaImagenRetoFinal(this.pathImage);
   @override
   Widget build(BuildContext context) {
     final tarjeta = Container(
-      height: 350.0,
-      width: 250.0,
-      margin: EdgeInsets.only(top: 80.0, left: 20.0),
+      height: 100.0,
+      width: 100.0,
+      margin: EdgeInsets.only(top: 0.0, left: 0.0),
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage(pathImage)),
           borderRadius: BorderRadius.all(Radius.circular(10.0)),

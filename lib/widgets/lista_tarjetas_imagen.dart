@@ -7,6 +7,7 @@ class ListaTarjetasImagen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:300.0,
+      width: 600.0,
       child: ListView(
         padding: EdgeInsets.all(15.0),
         scrollDirection: Axis.horizontal,
